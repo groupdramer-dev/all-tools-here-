@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termux Tools Hub</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Termux Tools Hub</h1>
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Buscar ferramentas..." aria-label="Buscar ferramentas">
+            <select id="categoryFilter" aria-label="Filtrar por categoria">
+                <option value="all">Todas as Categorias</option>
+                <option value="web">Invasão Web</option>
+                <option value="network">Rede</option>
+                <option value="most-used">Mais Usados</option>
+                <option value="scripting">Scripting</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <section id="toolsList"></section>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
