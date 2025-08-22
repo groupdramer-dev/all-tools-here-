@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Nmap",
+        "description": "Scanner de portas e redes para mapeamento de hosts e serviços.",
+        "category": "Rede",
+        "install": "pkg install nmap",
+        "usage": "nmap [opções] <alvo>\nExemplo: nmap -sV 192.168.1.1"
+    },
+    {
+        "name": "Metasploit",
+        "description": "Framework de testes de penetração para explorar vulnerabilidades.",
+        "category": "Invasão Web",
+        "install": "pkg install metasploit-framework",
+        "usage": "msfconsole\nExemplo: use exploit/<nome_do_exploit>"
+    },
+    {
+        "name": "SQLMap",
+        "description": "Ferramenta para automatizar injeções SQL em aplicações web.",
+        "category": "Invasão Web",
+        "install": "pkg install sqlmap",
+        "usage": "sqlmap -u <URL> [opções]\nExemplo: sqlmap -u http://example.com --dbs"
+    },
+    {
+        "name": "Python",
+        "description": "Linguagem de programação para scripting e automação.",
+        "category": "Scripting",
+        "install": "pkg install python",
+        "usage": "python <arquivo.py>\nExemplo: python script.py"
+    }
+]
