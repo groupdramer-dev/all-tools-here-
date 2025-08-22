@@ -5,23 +5,24 @@
 }
 
 body {
-    font-family: 'Roboto Mono', monospace;
-    background-color: #0d1117;
-    color: #c9d1d9;
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #1C2526;
+    color: #D9D9D9;
     line-height: 1.6;
 }
 
 header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: #2E2E2E;
     padding: 2rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #A10000;
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: #00b7d4;
-    text-shadow: 0 0 10px rgba(0, 183, 212, 0.5);
+    font-size: 2.2rem;
+    color: #A10000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .search-filter {
@@ -34,16 +35,87 @@ h1 {
 #searchInput, #categoryFilter {
     padding: 0.5rem;
     font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    background: #21262d;
-    color: #c9d1d9;
-    transition: all 0.3s ease;
+    border: 1px solid #4A4A4A;
+    border-radius: 4px;
+    background: #2E2E2E;
+    color: #D9D9D9;
+    transition: border-color 0.3s ease;
 }
 
 #searchInput:focus, #categoryFilter:focus {
     outline: none;
-    box-shadow: 0 0 8px rgba(0, 183, 212, 0.7);
+    border-color: #A10000;
+}
+
+.auth-section {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-section button {
+    padding: 0.5rem 1rem;
+    background: #A10000;
+    border: none;
+    border-radius: 4px;
+    color: #D9D9D9;
+    font-family: 'IBM Plex Mono', monospace;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.auth-section button:hover {
+    background: #C70000;
+}
+
+#adminPanel {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #2E2E2E;
+    border: 1px solid #4A4A4A;
+    border-radius: 4px;
+}
+
+#adminPanel h2 {
+    color: #A10000;
+    margin-bottom: 1rem;
+}
+
+#toolForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#toolForm input, #toolForm textarea, #toolForm select {
+    padding: 0.5rem;
+    background: #2E2E2E;
+    border: 1px solid #4A4A4A;
+    border-radius: 4px;
+    color: #D9D9D9;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+#toolForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#toolForm button {
+    padding: 0.5rem;
+    background: #A10000;
+    border: none;
+    border-radius: 4px;
+    color: #D9D9D9;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#toolForm button:hover {
+    background: #C70000;
 }
 
 #toolsList {
@@ -53,21 +125,20 @@ h1 {
 }
 
 .tool-card {
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 8px;
+    background: #2E2E2E;
+    border: 1px solid #4A4A4A;
+    border-radius: 4px;
     padding: 1.5rem;
     margin-bottom: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .tool-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 183, 212, 0.3);
+    transform: translateY(-3px);
 }
 
 .tool-card h2 {
-    color: #00b7d4;
+    color: #A10000;
     margin-bottom: 0.5rem;
 }
 
@@ -76,10 +147,11 @@ h1 {
 }
 
 .tool-card pre {
-    background: #0d1117;
+    background: #1C2526;
     padding: 1rem;
-    border-radius: 5px;
+    border-radius: 4px;
     overflow-x: auto;
+    border-left: 3px solid #A10000;
 }
 
 @media (max-width: 600px) {
