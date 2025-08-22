@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Termux Tools Hub</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <header>
@@ -20,8 +21,29 @@
                 <option value="scripting">Scripting</option>
             </select>
         </div>
+        <div class="auth-section">
+            <span id="userStatus">Não logado</span>
+            <button id="loginBtn" style="display: inline-block;">Login</button>
+            <button id="logoutBtn" style="display: none;">Sair</button>
+        </div>
     </header>
     <main>
+        <section id="adminPanel" style="display: none;">
+            <h2>Adicionar Nova Ferramenta</h2>
+            <form id="toolForm">
+                <input type="text" id="toolName" placeholder="Nome da ferramenta" required>
+                <textarea id="toolDescription" placeholder="Descrição" required></textarea>
+                <select id="toolCategory" required>
+                    <option value="web">Invasão Web</option>
+                    <option value="network">Rede</option>
+                    <option value="most-used">Mais Usados</option>
+                    <option value="scripting">Scripting</option>
+                </select>
+                <textarea id="toolInstall" placeholder="Comando de instalação" required></textarea>
+                <textarea id="toolUsage" placeholder="Comando de uso" required></textarea>
+                <button type="submit">Adicionar Ferramenta</button>
+            </form>
+        </section>
         <section id="toolsList"></section>
     </main>
     <script src="js/scripts.js"></script>
